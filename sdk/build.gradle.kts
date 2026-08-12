@@ -28,6 +28,7 @@ android {
     publishing {
         singleVariant("release") {
             withSourcesJar()
+            withJavadocJar()
         }
     }
 }
@@ -52,11 +53,24 @@ afterEvaluate {
                 pom {
                     name.set("Sentalong Android SDK")
                     description.set("Thin client over Sentalong's public tracking API.")
+                    url.set("https://github.com/rajgupttaa/sentalong-kotlin")
                     licenses {
                         license {
                             name.set("MIT License")
                             url.set("https://opensource.org/licenses/MIT")
                         }
+                    }
+                    developers {
+                        developer {
+                            id.set("rajgupttaa")
+                            name.set("Raj Kumar")
+                            email.set("theoneraj01@gmail.com")
+                        }
+                    }
+                    scm {
+                        url.set("https://github.com/rajgupttaa/sentalong-kotlin")
+                        connection.set("scm:git:https://github.com/rajgupttaa/sentalong-kotlin.git")
+                        developerConnection.set("scm:git:https://github.com/rajgupttaa/sentalong-kotlin.git")
                     }
                 }
             }
